@@ -1,4 +1,4 @@
-# Video Lesson 1
+# Video Lesson 0
 
 ### 'ASCII' - Computer-friendly representations
 'A':65, 'B':66, 'C':67... 'Z':90 (+26-1)
