@@ -55,6 +55,12 @@ int main (void) { // no arguments, the main function is the function that runs e
   type arr_name[max_size];
   // or
   type arr_name[optional_max_size_n] = {item_1, item_2, item_3... item_n}; // maximum n-sized array
+  
+  // Incrementing
+  int C = 0;
+  C++; // yearh!
+  C += 1; // same as above, but not as cool.
+  C = C + 1 // same-o lame-tho
 }
 ```
 ***
@@ -161,8 +167,16 @@ About sizes...
 ![Size of][sizeofs]
 Note that the sizes are in bytes, which are 8 bits.
 **RAM is the place where programs live in, where temporary memory is allocated to things like storing variables etc.**
+Storing things that require more than the specified memory size leads to Overflow!
+**Some Examples**
+- *Lego World* money capping at 4 billion because of choice of integer and not long long
+- *Civilisation*'s Ghandi has a 1 on the aggressiveness index which decrements by 2 if adopting democracy leading to the usage of unsigned ints which do not take to negative signs properly to turn the -1 value to 255, making Ghandi maximum aggressive.
+- 2015 Article on the Boeing 787 Dreamliner reporting that FAA officials warn software vulnerability caused pilots to lose control of the plane possibly midflight. Also, the plane will lose all power if powered straight for 248 days since **all control units, GCUs simultaneously go into fail safe mode.** The reported cause was that an internal counter to the generator control overflows after 248 days of continuous power. This means that the counter inside runs into memory errors which then cause the plane to reboot, which may happen midflight.
 
-
+### 'imprecision.c' - Floating point arithmetic
+- Floats aren't precise. There's a limit to it, since the arithmetic is basically using integers and then putting the extras behind a decimal point.
+- '%.xf' where x is any integer VALUE(hardcoded) allows the placeholder to specify the number of decimal places to print.
+- 
 
 
 
