@@ -4,7 +4,7 @@
 While true loops indirectly imply that there are more sophisticated terminating conditions to be handled within the loop body, and that the loop by default should not break. ...
 C Syntax:
 ```C
-#include <stdio>
+#include <stdio.h>
 
 int main (void) { // no arguments, the main function is the function that runs every time the file is executed
   while (true) {
