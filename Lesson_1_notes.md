@@ -1,7 +1,7 @@
 # Video Lesson 1 Notes
 
 ### 'Loops' - :/
-While true loops indirectly imply that there are more sophisticated terminating conditions to be handled within the loop body, and that the loop by default should not break. ...
+While true loops indirectly imply that there are more sophisticated terminating conditions to be handled within the loop body, and that the loop by default should not break.___
 C Syntax:
 ```C
 #include <stdio.h>
@@ -26,6 +26,6 @@ int main (void) { // no arguments, the main function is the function that runs e
   int arr_name[size] = [];// arrays
 }
 ```
-
+***
 ### '
 
