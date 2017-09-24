@@ -10,6 +10,9 @@
 [sizeofs]: https://github.com/WHKcoderox/CS-50-notes/blob/master/images/Screenshot-2016-fall-lectures-1-at-57m9s.png "Variable memory allocations"
 [specialchars]: https://github.com/WHKcoderox/CS-50-notes/blob/master/images/Screenshot-2016-fall-lectures-1-at-58m36s%20(1).png "Special Characters"
 [placeholders]: https://github.com/WHKcoderox/CS-50-notes/blob/master/images/Screenshot-2016-fall-lectures-1-at-58m36s.png "Placeholders"
+[imprecision]: https://github.com/WHKcoderox/CS-50-notes/blob/master/images/Screenshot-2016-fall-lectures-1-at-1h16m39s.png "Imprecision"
+[switch]: https://github.com/WHKcoderox/CS-50-notes/blob/master/images/Screenshot-2016-fall-lectures-1-at-1h39m37s.png "Switch Case"
+[fswitch]: https://github.com/WHKcoderox/CS-50-notes/blob/master/images/Screenshot-2016-fall-lectures-1-at-1h41m0s.png "Switch failed"
 
 # Video Lesson 1 Notes
 
@@ -174,9 +177,23 @@ Storing things that require more than the specified memory size leads to Overflo
 - 2015 Article on the Boeing 787 Dreamliner reporting that FAA officials warn software vulnerability caused pilots to lose control of the plane possibly midflight. Also, the plane will lose all power if powered straight for 248 days since **all control units, GCUs simultaneously go into fail safe mode.** The reported cause was that an internal counter to the generator control overflows after 248 days of continuous power. This means that the counter inside runs into memory errors which then cause the plane to reboot, which may happen midflight.
 
 ### 'imprecision.c' - Floating point arithmetic
+![Imprecision][imprecision]
 - Floats aren't precise. There's a limit to it, since the arithmetic is basically using integers and then putting the extras behind a decimal point.
 - '%.xf' where x is any integer VALUE(hardcoded) allows the placeholder to specify the number of decimal places to print.
-- 
+- Floating point arithmetic is really just pitting integers that seem close enough to estimate the next integer close enough to represent the resultant float. Thus, it is generally not recommended to stick with floats as a primary form of data (if possible, keep things as integer variables then cast a float division on them maybe)
+**Some Examples**
+- 04/07/1996, an unmanned rocket named Ariane 5 was launched, carrying satellites to precisely examine interactions between the Earth's magnetic field and solar winds. In 40 seconds from launch, the scientists decided to blow up the rocket before it became a public hazard. This was because the number that required 64 bits to store was stored in 16 bit variables that was carried over from the previous iteration of the rocket, the Ariane 4, to save from the high costs of software development. This generated a fatal flaw arising from the memory overflow. The Ariane 5 had higher acceleration figures that was not accounted for in the migration of the Ariane 4's software. Boom!
+- 1991 First Gulf War missile defense system couldn't properly detect inbound scud warheads. This inaccuracy, combined with the fact that the scuds were unstable and hard to intercept to begin with, resulted in early detonations that conveyed the misinformation that the Patriot Missile interception was working. The time stored as a floating point number that had .1s intervals meant that keeping that internal clock running for over 100 hours allowed time lags that caused calculations to become noticeably inaccurate, exacerbated by the large figures involved in the computing. Then, one scud slipped by undetected, due to timing imprecision of the built in missile tracking and detection radar in the patriot system, to kill 28 as it slammed into a bunker. 
+
+### 'switch.c' - Switch Case in C
+![Switch][switch]
+- Switch Case statements are basically conditional checking of a subject inside switch() that has certain cases that are checked by equality operator (==).
+- How it works is that given any successful case, run everything below (going through the cases)
+- This allows for some unique conditional control :D awesome.
+- By breaking, you would break out of the switch case. Or, you could wind up with something like this:
+![Fail Switch][fswitch]
+
+### 
 
 
 
