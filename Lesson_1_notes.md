@@ -13,6 +13,8 @@
 [imprecision]: https://github.com/WHKcoderox/CS-50-notes/blob/master/images/Screenshot-2016-fall-lectures-1-at-1h16m39s.png "Imprecision"
 [switch]: https://github.com/WHKcoderox/CS-50-notes/blob/master/images/Screenshot-2016-fall-lectures-1-at-1h39m37s.png "Switch Case"
 [fswitch]: https://github.com/WHKcoderox/CS-50-notes/blob/master/images/Screenshot-2016-fall-lectures-1-at-1h41m0s.png "Switch failed"
+[prototype]: https://github.com/WHKcoderox/CS-50-notes/blob/master/images/Screenshot-2016-fall-lectures-1-at-2h4m9s.png "Prototypes"
+[assembly]: https://github.com/WHKcoderox/CS-50-notes/blob/master/images/Screenshot-2016-fall-lectures-1-at-2h5m30s.png "Assembly Stuff"
 
 # Video Lesson 1 Notes
 
@@ -193,7 +195,24 @@ Storing things that require more than the specified memory size leads to Overflo
 - By breaking, you would break out of the switch case. Or, you could wind up with something like this:
 ![Fail Switch][fswitch]
 
-### 
+### 'prototype.c' - Functions and Prototypes
+![Proto][prototype]
+- Prototypes are declarations that rely on the explicit initialisation of things like functions or classes. Specifications of arguments must be consistent acrosss the function/class implementation and its prototype.
+- An error will be raised if you use the function name (with the function prototype defined) without implementing it.
 
+### 'Compiling in Detail' - A Breakdown of C Compile Steps
+There is basically 4 steps: Preprocessing, compiling, assembling and linking.
+1. Preprocessing: All '#'s are preprocessor directives - terms that tells the compiler to execute certain instructions before doing anything else to the file. Some examples include
+```C
+#include
+#define
+#ifndef
+//etc
+```
+Include here is just an entire transfer of code from some library, define is for making macro replacements (a different way to parse speciic parts of code) and ifndef is for conditional stuff.
 
+2. Compiling: Turning code into assembly code tailored for the system the code was compiled on. ![Assembly][assembly]
+3. Assembling: Turn it into binary.
+4. Linking: Put the different binaries together in one whole heap of binary and voila finished program.
 
+# The End
