@@ -32,7 +32,7 @@ And here's how much embarrassment you should be ready to embrace:
 - A key is used to generate some cryptic string for the input string and thus makes it impossible to understand by reading it. Of course, then you just need the same key, same cryptic string and the encryption algorithm in order to undo the generation and obtain the original, and hopefully readable string. Not recommended for any serious developments, this cryptography is very weak given that the key is hard to hide from hackers. 
 
 ### 'Strings', 'ascii', 'Capitalise', 'argv' - Iterables and Command Line Arguments
-- Strings are immutable (read-only) chains of characters that are terminated by the '\0' character (in binary it's just 00000000). An example of how some strings might be stored:
+- Strings are chains of characters that are terminated by the '\0' character (in binary it's just 00000000). An example of how some strings might be stored:
 ![Strings][strings]
 - And you can read every character just fine with the use of a for loop, by pointing at every single letter inside the string.
 ![Iterable][iterable]
